@@ -12,12 +12,10 @@ information about educational cohorts.
 ## Cohort Supporting Packages
 
 `cohortr` relies on a family of packages designed to make R more efficient for
-data analysts. Most of the ideas come from Hadley's [Tidyverse](https://github.com/tidyverse/tidyverse). Specificially, `dplyr`
-and the associated pipe operator and the notion of verbs is borrowed from
-the tidyverse.
+data analysts. Most of the ideas come from Hadley's [Tidyverse](https://github.com/tidyverse/tidyverse). Specificially, `dplyr`, the associated pipe operator and the notion of verbs is borrowed from the tidyverse.
 
 In addition, I have created additional packages to support `cohortr` including:
-[`datapointsr`](https://github.com/MattjCamp/datapointsr), [`coder`](https://github.com/MattjCamp/coderr) and [`dbr`](https://github.com/MattjCamp/dbr).
+[`datapointsr`](https://github.com/MattjCamp/datapointsr), [`coderr`](https://github.com/MattjCamp/coderr) and [`dbr`](https://github.com/MattjCamp/dbr).
 
 `coderr` in particular is used throughout this package because it's designed
 to automate SQL code writing.
