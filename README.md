@@ -2,8 +2,7 @@
 
 ## Read Me
 
-`cohortr` helps you get insight into educational cohorts. This package includes
-lookup functions for WICHE, US States and other information needed for cohort analysis.
+`cohortr` applies the grammer of data manipulation to educational cohorts so that we can built analysis that is insightful, transparent and reproducible.
 
 `cohortr` uses a SQL based grammer that works with databases to provide reusable 
 procedures to create statistical tables. The verbs in this grammer are functions that 
