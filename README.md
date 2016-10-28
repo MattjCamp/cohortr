@@ -90,6 +90,13 @@ transformating SQL tables on our server.
 
 I then plug in these verbs as needed to `cohortr` to build up analysis and visualizations.
 
+### Required!
+
+One thing you will have to do is to override the implementation of `pull_data` if you want to use your own data source. This function points to the database that comes with this package and is used in the example. What you could do is copy this function and then replace the object `db` with a reference to your database. The only requirement is that your `db` object must be a database object from the `dbr` package.
+
+For instance, I have an Amazon Redshift `db` object and in my private pull_data function all my credentials are entered in when `pull_data` is called for the first time. You could do the same with MS SQL Server, Amazon Redshift or a local SQLite database.
+
+>**NOTE** It's not actually 100% required that you override `pull_data`. You should instead swap out your own query method as long as is able to process SQL statments. So, if you were using data frames you could use something like `sqldf` to execute SQL against your data frame.
 
 ## To-Do
 
