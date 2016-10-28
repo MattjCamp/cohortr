@@ -1,0 +1,21 @@
+Package: cohortr
+Type: Package
+Title: Provides insight into educational cohort
+Version: 0.1.1
+Author: Matt Campbell
+Maintainer: Who to complain to <mcampbell@collegeboard.org>
+Description: Provides a tidyverse like grammer to help understand educational
+    cohorts. Includes reference resources.
+License: What license is it under?
+LazyData: TRUE
+Imports:
+    sqldf,
+    coderr,
+    dbr,
+    datapointsr,
+    tidyverse
+Suggests:
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+RoxygenNote: 5.0.1
