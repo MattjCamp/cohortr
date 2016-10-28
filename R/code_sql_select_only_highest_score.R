@@ -8,8 +8,8 @@
 #' @examples
 #' @return A data frame with distinct cohort records
 
-select_only_highest_score <- function(sample_sql,
-                                      by_exam = FALSE){
+code_sql_select_only_highest_score <- function(sample_sql,
+                                               by_exam = FALSE){
 
   library(magrittr)
 

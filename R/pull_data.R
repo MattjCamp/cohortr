@@ -10,10 +10,10 @@
 pull_data <- function(sql){
 
   if (!exists("db")) {
-    db <- dbr::sqlite(system.file("extdata", "test_scores.db", package = "cohortr"))
+    db <<- dbr::sqlite(system.file("extdata", "test_scores.db", package = "cohortr"))
   } else {
     if (is.null(db)) {
-      db <- dbr::sqlite(system.file("extdata", "test_scores.db", package = "cohortr"))
+      db <<- dbr::sqlite(system.file("extdata", "test_scores.db", package = "cohortr"))
     }
   }
 
