@@ -56,7 +56,7 @@ summarize(n = length(person),
           mean = mean(score))
 ```
 
-This code would produce this output:
+**students** is a table on a SQLite database that comes with the installation of `cohortr`. This is used as a stand in to a database server that would typically house this kind of data. The code above would produce this output:
 
 ```
 # A tibble: 2 × 3
