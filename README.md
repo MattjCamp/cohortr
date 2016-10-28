@@ -2,7 +2,7 @@
 
 ## Read Me
 
-`cohortr` applies the grammer of data manipulation to educational cohorts so that we can built analysis that is insightful, transparent and reproducible.
+`cohortr` applies the grammer of data manipulation to educational cohorts so that we can build data analysis that is insightful, transparent and reproducible.
 
 `cohortr` uses a SQL based grammer that works with databases to provide reusable 
 procedures to create statistical tables. The verbs in this grammer are functions that 
