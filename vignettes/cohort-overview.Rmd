@@ -1,0 +1,27 @@
+---
+title: "Cohort Overview"
+author: "Matt Campbell"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Cohort Overview}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+# WICHE
+
+You can use the `wiche` table to join to your cohort to 
+get participation rates or to otherwise see enrollments of
+students by state. Here is what the `wiche` table looks like:
+
+```{r warning = FALSE}
+
+library(dplyr)
+library(cohortr)
+
+wiche
+
+```
+
+
