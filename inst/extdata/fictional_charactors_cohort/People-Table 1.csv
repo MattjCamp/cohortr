@@ -1,0 +1,149 @@
+ID,Character,Posting,Trained_At,Species,Gender
+1,Alexander Rozhenko,IKS Rotarran,2,Klingon/Human,Man
+2,Alynna Nechayev,Starfleet Command,1,Human,Woman
+3,Alyssa Ogawa,USS Enterprise-E,1,Human,Female
+4,Amanda Grayson,Vulcan,4,Human,female
+5,Ayala,USS Voyager,1,Human,women
+6,Azan,USS Voyager,1,Wysanti,male
+7,B'Elanna Torres,USS Voyager,1,Klingon/Human,female
+8,B'Etor,Bird of Prey,2,Klingon,Man
+9,Bareil Antos,Bajor Resident,,Bajoran,Man
+10,Benjamin Sisko,Deep Space 9,1,Human,Man
+11,Beverly Crusher,USS Enterprise-E,1,Human,female
+12,Brunt,Ferenginar,8,Ferengi,female
+13,Carol Marcus,Project Genesis,1,Human,female
+14,Chakotay,USS Voyager,1,Human,Man
+15,Charles Tucker,USS Enterprise NX-01,1,Human,Man
+16,Chell,USS Voyager,1,Bolian,Man
+17,Christine Chapel,Starfleet Command,1,Human,female
+18,Christopher Pike,Starfleet Command,1,Human,male
+19,Damar,CMS Groumall,5,Cardassian,Man
+20,Daniels,,,Human,Man
+21,Data,USS Enterprise-D,1,Android,0
+22,Deanna Troi,USS Enterprise-D,1,Betazoid/Human,female
+23,Degra,Xindi Council,,Xindi-Primate,1
+24,Dolim,Xindi Council,,Xindi-Reptilian,Man
+25,Dukat,Cardassia Prime,5,Cardassian,Man
+26,Elim Garak,Deep Space 9,5,Cardassian,Man
+27,Elizabeth Cutler,Enterprise NX-01,1,Human,F
+28,Enabran Tain,Cardassia,5,Cardassian,Man
+29,Erika Hernandez,Columbia NX-02,1,Human,female
+30,Evek,CMS Vetar,5,Cardassian,Man
+31,Ezri Dax,Deep Space 9,,Trill,M
+32,Female Changeling,Cardassia Prime,,Changeling,female
+33,Garrison,USS Enterprise,1,Human,Man
+34,Geordi La Forge,USS Enterprise-D,1,Human,Man
+35,Gowron,Klingon High Council,2,Klingon,Man
+36,Guinan,USS Enterprise-D,1,El-Aurian,female
+37,Harry Kim,USS Voyager,1,Human,Man
+38,Hikaru Sulu,USS Excelsior,1,Human,Man
+39,Hogan,USS Voyager,1,Human,Man
+40,Hoshi Sato,USS Enterprise NX-01,1,Human,male
+41,Hugh of Borg,,3,Borg,male
+42,Icheb,USS Voyager,1,Brunali,male
+43,Ishka,Ferenginar,8,Ferengi,female
+44,J. Hayes,USS Enterprise NX-01,1,Human,male
+45,J. M. Colt,USS Enterprise,1,Human,male
+46,Jadzia Dax,Deep Space 9,1,Trill,female
+47,Jake Sisko,Deep Space 9,1,Human,male
+48,Jal Culluh,Kazon-Nistrim,,Kazon,female
+49,James T. Kirk,USS Enterprise-A,1,Human,male
+50,Janice Rand,USS Excelsior,1,Human,female
+51,Jannar,Xindi Council,,Xindi-Arboreal,female
+52,Jean-Luc Picard,USS Enterprise-D,1,Human,male
+53,Jennifer Sisko,USS Saratoga ,1,Human,female
+54,Jonathan Archer,USS Enterprise NX-01,1,Human,male
+55,Joseph Carey,USS Voyager,1,Human,male
+56,Joseph Sisko,Earth,1,Human,male
+57,José Tyler,USS Enterprise,1,Human,male
+58,Julian Bashir,Deep Space 9,1,Human,female
+59,K'Ehleyr,Earth,2,Klingon/Human,male
+60,Kashimuro Nozawa,USS Voyager,1,Human,male
+61,Kasidy Yates,USS Xhosa,1,Human,female
+62,Katherine Pulaski,USS Enterprise-D,1,Human,female
+63,Kathryn Janeway,Starfleet Command,1,Human,female
+64,Keiko O'Brien,Deep Space 9,1,Human,male
+65,Kes,USS Voyager,1,Ocampa,female
+66,Kimara Cretak,Deep Space 9,6,Romulan,female
+67,Kira Nerys,Deep Space 9,1,Bajoran,female
+68,Kor,Klingon Defense Force,2,Klingon,male
+69,Kurn,Deep Space 9,1,Klingon,male
+70,Leeta,Deep Space 9,1,Bajoran,female
+71,Leonard McCoy,USS Enterprise-A,1,Human,male
+72,Leonardo da Vinci,USS Voyager Program,1,Hologram,male
+73,Li Nalas,Deep Space 9,1,Bajoran,male
+74,Lon Suder,USS Voyager,1,Betazoid,male
+75,Lore,,,Android,male
+76,Lursa,Bird of Prey,2,Klingon,female
+77,Luther Sloan,Section 31,,Human,male
+78,Lwaxana Troi,Betazed,1,Betazoid,female
+79,Maihar'du,Ferenginar,,Hupyrian,male
+80,Malcolm Reed,USS Enterprise NX-01,1,Human,male
+81,Mallora,Xindi Council,,Xindi-Primate,female
+82,Martok,IKS Rotarran,2,Klingon,male
+83,Maxwell Forrest,Starfleet Command,1,Human,male
+84,Mezoti,USS Voyager,1,Norcadian,male
+85,Michael Eddington,Deep Space 9,1,Human,male
+86,Michael Jonas,USS Voyager,1,Human,male
+87,Michael Rostov,USS Enterprise NX-01,1,Human,male
+88,Mila,Cardassia,5,Cardassian,female
+89,Miles O'Brien,USS Enterprise-D,1,Human,male
+90,Molly O'Brien,Deep Space 9,1,Human,women
+91,Montgomery Scott,USS Enterprise-A,1,Human,male
+92,Mora Pol,Bajor,,Bajoran,female
+93,Morn,Deep Space 9,1,Lurian,male
+94,Mot,USS Enterprise-D,1,Bolian,male
+95,Mr. Homn,Betazed,,,male
+96,Naomi Wildman,USS Voyager,1,Ktarian/Human,female
+97,Neelix,USS Voyager,8,Talaxian,male
+98,Nog,Deep Space 9,1,Ferengi,male
+99,Number One,USS Enterprise,1,Human,male
+100,Nyota Uhura,USS Enterprise-A,1,Human,female
+101,Odo,Deep Space 9,1,Changeling,male
+102,Opaka Sulan,Bajor Resident,,Bajoran,female
+103,Owen Paris,Starfleet Command,1,Human,male
+104,Pavel Chekov,USS Enterprise-A,1,Human,male
+105,Phillip Boyce,USS Enterprise,1,Human,male
+106,Phlox,USS Enterprise NX-01,1,Denobulan,male
+107,Q,Q Continuum,,Q,male
+108,Quark,Deep Space 9,8,Ferengi,male
+109,Rebi,USS Voyager,1,Wysanti,male
+110,Reginald Barclay,USS Enterprise-D,1,Human,male
+111,Ro Laren,USS Enterprise-D,1,Bajoran,male
+112,Robin Lefler,USS Enterprise-D,1,Human,female
+113,Rom,Deep Space 9,8,Ferengi,male
+114,Saavik,USS Grissom,4,Vulcan/Romulan,male
+115,Samantha Wildman,USS Voyager,1,Human,female
+116,Sarah Sisko,Earth Resident,1,Human,female
+117,Sarek,Vulcan,4,Vulcan,male
+118,Sela,,6,Romulan/Human,female
+119,Seska,USS Voyager,1,Cardassian,female
+120,Seven of Nine,USS Voyager,1,Human,female
+121,Shakaar Edon,Bajor Resident,,Bajoran,female
+122,Silik,Suliban Cabal,,Suliban,male
+123,Sonya Gomez,USS Enterprise-D,1,Human,female
+124,Soval,Earth,4,Vulcan,male
+125,Spock,USS Enterprise-A,1,Vulcan/Human,male
+126,Susan Nicoletti,USS Voyager,1,Human,female
+127,T'Pol,USS Enterprise NX-01,4,Vulcan,male
+128,Tal Celes,USS Voyager,1,Bajoran,female
+129,Tasha Yar,USS Enterprise-D,1,Human,female
+130,The Borg Queen,Borg Collective,3,Borg,female
+131,The Doctor,USS Voyager,1,Hologram,male
+132,The Traveler,Tau Alpha C,,,male
+133,Thy'lek Shran,Kumari,,Andorian,female
+134,Tom Paris,USS Voyager,1,Human,male
+135,Tomalak,IRW Terix,6,Romulan,male
+136,Tora Ziyal,Deep Space 9,5,Bajoran/Cardassian,female
+137,Travis Mayweather,USS Enterprise NX-01,1,Human,male
+138,Tuvok,USS Voyager,4,Vulcan,male
+139,Vash,Earth,1,Human,male
+140,Vic Fontaine,Deep Space 9,1,Hologram,male
+141,Vorik,USS Voyager,1,Vulcan,male
+142,Wesley Crusher,USS Enterprise-D,1,Human,male
+143,Weyoun,Cardassia Prime,5,Vorta,male
+144,William Riker,Enterprise-D,1,Human,male
+145,William Ross,Deep Space 9,1,Human,male
+146,Winn Adami,Bajor,,Bajoran,male
+147,Worf,Enterprise-D,1,Klingon,male
+148,Zek,Ferenginar,8,Ferengi,male
