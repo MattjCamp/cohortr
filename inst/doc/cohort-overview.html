@@ -76,25 +76,170 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <div id="wiche" class="section level1">
 <h1>WICHE</h1>
-<p>You can use the <code>wiche</code> table to join to your cohort to get participation rates or to otherwise see enrollments of students by state. Here is what the <code>wiche</code> table looks like:</p>
+<p>You can use the <code>wiche</code> table to join to your cohort to get participation rates or to otherwise see enrollments of students by state. Here is what the first 10 rows of the <code>wiche</code> table looks like:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(dplyr)
 <span class="kw">library</span>(cohortr)
 
 wiche</code></pre></div>
-<pre><code>## # A tibble: 193,024 × 7
-##    location sector  race gender grade  year     n
-##       &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;int&gt;
-## 1        in      p asian    all     8  2021  2306
-## 2        in      p asian    all     9  2021  2407
-## 3        in      p asian    all    10  2021  2314
-## 4        in      p asian    all    11  2021  2801
-## 5        in      p asian    all    12  2021  2578
-## 6        in      p asian    all     g  2021  2201
-## 7        in      p black    all     1  2021    NA
-## 8        in      p black    all     2  2021    NA
-## 9        in      p black    all     3  2021    NA
-## 10       in      p black    all     4  2021    NA
-## # ... with 193,014 more rows</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">location</th>
+<th align="left">sector</th>
+<th align="left">race</th>
+<th align="left">gender</th>
+<th align="left">grade</th>
+<th align="right">year</th>
+<th align="right">n</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">in</td>
+<td align="left">p</td>
+<td align="left">asian</td>
+<td align="left">all</td>
+<td align="left">8</td>
+<td align="right">2021</td>
+<td align="right">2306</td>
+</tr>
+<tr class="even">
+<td align="left">in</td>
+<td align="left">p</td>
+<td align="left">asian</td>
+<td align="left">all</td>
+<td align="left">9</td>
+<td align="right">2021</td>
+<td align="right">2407</td>
+</tr>
+<tr class="odd">
+<td align="left">in</td>
+<td align="left">p</td>
+<td align="left">asian</td>
+<td align="left">all</td>
+<td align="left">10</td>
+<td align="right">2021</td>
+<td align="right">2314</td>
+</tr>
+<tr class="even">
+<td align="left">in</td>
+<td align="left">p</td>
+<td align="left">asian</td>
+<td align="left">all</td>
+<td align="left">11</td>
+<td align="right">2021</td>
+<td align="right">2801</td>
+</tr>
+<tr class="odd">
+<td align="left">in</td>
+<td align="left">p</td>
+<td align="left">asian</td>
+<td align="left">all</td>
+<td align="left">12</td>
+<td align="right">2021</td>
+<td align="right">2578</td>
+</tr>
+<tr class="even">
+<td align="left">in</td>
+<td align="left">p</td>
+<td align="left">asian</td>
+<td align="left">all</td>
+<td align="left">g</td>
+<td align="right">2021</td>
+<td align="right">2201</td>
+</tr>
+<tr class="odd">
+<td align="left">in</td>
+<td align="left">p</td>
+<td align="left">black</td>
+<td align="left">all</td>
+<td align="left">1</td>
+<td align="right">2021</td>
+<td align="right">NA</td>
+</tr>
+<tr class="even">
+<td align="left">in</td>
+<td align="left">p</td>
+<td align="left">black</td>
+<td align="left">all</td>
+<td align="left">2</td>
+<td align="right">2021</td>
+<td align="right">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">in</td>
+<td align="left">p</td>
+<td align="left">black</td>
+<td align="left">all</td>
+<td align="left">3</td>
+<td align="right">2021</td>
+<td align="right">NA</td>
+</tr>
+<tr class="even">
+<td align="left">in</td>
+<td align="left">p</td>
+<td align="left">black</td>
+<td align="left">all</td>
+<td align="left">4</td>
+<td align="right">2021</td>
+<td align="right">NA</td>
+</tr>
+</tbody>
+</table>
+<p>You can do a quick lookup with the <code>lookup_wiche</code> function. Here is how to see the enrollments for 8th and 9th graders in Pennsylvania and New Jersey:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">lookup_wiche</span>(<span class="dt">location =</span> <span class="kw">c</span>(<span class="st">&quot;pa&quot;</span>, <span class="st">&quot;nj&quot;</span>),
+             <span class="dt">grade =</span> <span class="kw">c</span>(<span class="dv">8</span>, <span class="dv">9</span>))</code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">location</th>
+<th align="left">sector</th>
+<th align="left">race</th>
+<th align="left">gender</th>
+<th align="left">grade</th>
+<th align="right">year</th>
+<th align="right">n</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">nj</td>
+<td align="left">p</td>
+<td align="left">all</td>
+<td align="left">all</td>
+<td align="left">8</td>
+<td align="right">2016</td>
+<td align="right">97887</td>
+</tr>
+<tr class="even">
+<td align="left">nj</td>
+<td align="left">p</td>
+<td align="left">all</td>
+<td align="left">all</td>
+<td align="left">9</td>
+<td align="right">2016</td>
+<td align="right">105524</td>
+</tr>
+<tr class="odd">
+<td align="left">pa</td>
+<td align="left">p</td>
+<td align="left">all</td>
+<td align="left">all</td>
+<td align="left">8</td>
+<td align="right">2016</td>
+<td align="right">137779</td>
+</tr>
+<tr class="even">
+<td align="left">pa</td>
+<td align="left">p</td>
+<td align="left">all</td>
+<td align="left">all</td>
+<td align="left">9</td>
+<td align="right">2016</td>
+<td align="right">152040</td>
+</tr>
+</tbody>
+</table>
 </div>
 
 

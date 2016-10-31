@@ -16,11 +16,6 @@ lookup_wiche <- function(location = "us",
   if (is.null(year))
     year <- as.numeric(stringr::str_match(Sys.Date(), "[0-9]{4}"))
 
-
-  if (!is.null(location))
-    location <- coderr::code_vector_to_csv_list(location,
-                                                add.quotes = FALSE,
-                                                enclose.in.parenthesis = FALSE)
   l <- location
   s <- sector
   r <- race
@@ -29,11 +24,11 @@ lookup_wiche <- function(location = "us",
   y <-  year
 
   wiche %>%
-    dplyr::filter(location == l,
-                  sector == s,
-                  race == r,
-                  gender == g,
-                  grade == gr,
-                  year == y)
+    dplyr::filter(location %in% l,
+                  sector %in% s,
+                  race %in% r,
+                  gender %in% g,
+                  grade %in% gr,
+                  year %in% y)
 
 }

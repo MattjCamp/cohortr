@@ -13,9 +13,10 @@ vignette: >
 
 You can use the `wiche` table to join to your cohort to 
 get participation rates or to otherwise see enrollments of
-students by state. Here is what the `wiche` table looks like:
+students by state. Here is what the first 10 rows of the
+`wiche` table looks like:
 
-```{r warning = FALSE}
+```{r warning = FALSE, message = FALSE, results = "hide"}
 
 library(dplyr)
 library(cohortr)
@@ -24,4 +25,19 @@ wiche
 
 ```
 
+`r knitr::kable(wiche[1:10,])`
+
+You can do a quick lookup with the `lookup_wiche` function. Here
+is how to see the enrollments for 8th and 9th graders in Pennsylvania
+and New Jersey:
+
+```{r warning = FALSE, message = FALSE, results = "hide"}
+
+lookup_wiche(location = c("pa", "nj"),
+             grade = c(8, 9))
+
+```
+
+`r knitr::kable(lookup_wiche(location = c("pa", "nj"),
+             grade = c(8, 9)))`
 
