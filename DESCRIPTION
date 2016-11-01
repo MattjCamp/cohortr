@@ -4,8 +4,7 @@ Title: Provides insight into educational cohorts
 Version: 0.1.2
 Author: Matt Campbell
 Maintainer: Who to complain to <mcampbell@collegeboard.org>
-Description: Provides a tidyverse like grammer to help understand educational
-    cohorts. Includes reference resources.
+Description: Applies the grammer of data manipulation to educational cohorts so that we can build data analysis that is insightful, transparent and reproducible..
 License: What license is it under?
 LazyData: TRUE
 Imports:
