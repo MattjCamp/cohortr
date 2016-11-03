@@ -1,7 +1,7 @@
 Package: cohortr
 Type: Package
-Title: Provides insight into educational cohorts
-Version: 0.1.2
+Title: Builds reproducible educational cohort analysis with a tidy cohort grammar
+Version: 0.1.3
 Author: Matt Campbell
 Maintainer: Who to complain to <mcampbell@collegeboard.org>
 Description: Applies the grammer of data manipulation to educational cohorts so that we can build data analysis that is insightful, transparent and reproducible..
