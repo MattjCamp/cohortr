@@ -8,7 +8,7 @@ test_that("LOOKUP FUNCTION WORKS", {
   d <-
     lookup_states()
 
-  expect_equal(d$n, 3000793)
+  expect_false(all(is.na(d)))
 
 })
 
