@@ -1,23 +1,32 @@
 #' Pull Data
 #'
-#' Pulls data from the active database instance, if none exists this function attempts to connect to Cornerstone using the function database_cornerstone (which you need to code with your credientials)
+#' Pulls data from the active database instance or the provided dbr object.
 #' @keywords database
 #' @param sql The SQL code to be executed
+#' @param db Specify different database (dbr object)
 #' @export
-#' @examples
-#'
 
-pull_data <- function(sql){
+pull_data <- function(sql, db_alt = NULL){
 
-  if (!exists("db")) {
-    db <<- dbr::sqlite(system.file("extdata", "test_scores.db", package = "cohortr"))
+  if (is.null(db_alt)) {
+
+    d <- tryCatch({
+
+      d <- tibble::as_tibble(db$query(sql))
+      d
+
+      }, error = function(err) {
+
+        db <<- cohortr::db_connect()
+        d <- tibble::as_tibble(db$query(sql))
+        d
+
+        })
+
   } else {
-    if (is.null(db)) {
-      db <<- dbr::sqlite(system.file("extdata", "test_scores.db", package = "cohortr"))
-    }
+      d <- tibble::as_tibble(db_alt$query(sql))
   }
 
-  tibble::as_tibble(db$query(sql))
+  d
 
 }
-

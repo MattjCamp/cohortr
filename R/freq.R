@@ -2,7 +2,6 @@
 #' Frequency Distribution
 #'
 #' Returns a frequency distribution with more detail than a simple count of objects.
-#' @description
 #' @param x the vector of observations
 #' @keywords statistics, frequncy
 #' @export

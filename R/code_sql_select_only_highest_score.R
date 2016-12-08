@@ -4,9 +4,8 @@
 #' Selects distinct examinees with the highest score
 #' @keywords database, state, location
 #' @param sql SQL code from a cohort sample
-#' @export
-#' @examples
 #' @return A data frame with distinct cohort records
+#' @export
 
 code_sql_select_only_highest_score <- function(sample_sql,
                                                by_exam = FALSE){

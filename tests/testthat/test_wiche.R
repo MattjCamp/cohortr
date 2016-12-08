@@ -6,9 +6,9 @@ context("WICHE DATA")
 test_that("LOOKUP FUNCTION WORKS", {
 
   d <-
-    lookup_wiche()
+    lookup_wiche(location == "pa")
 
-  expect_equal(d$n, 3000793)
+  expect_equal(d$n, 123758)
 
 })
 

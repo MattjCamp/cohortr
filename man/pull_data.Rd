@@ -4,16 +4,15 @@
 \alias{pull_data}
 \title{Pull Data}
 \usage{
-pull_data(sql)
+pull_data(sql, db_alt = NULL)
 }
 \arguments{
 \item{sql}{The SQL code to be executed}
+
+\item{db}{Specify different database (dbr object)}
 }
 \description{
-Pulls data from the active database instance, if none exists this function attempts to connect to Cornerstone using the function database_cornerstone (which you need to code with your credientials)
-}
-\examples{
-
+Pulls data from the active database instance or the provided dbr object.
 }
 \keyword{database}
 

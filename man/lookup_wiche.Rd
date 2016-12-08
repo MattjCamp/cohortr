@@ -7,6 +7,19 @@
 lookup_wiche(location = "us", sector = "p", race = "all",
   gender = "all", grade = "g", year = NULL)
 }
+\arguments{
+\item{location}{state abbreviation in lowercase or us for entire nation}
+
+\item{sector}{identifies all, public or non-public schools}
+
+\item{race}{identifies all or particular races}
+
+\item{gender}{idenifies the sex}
+
+\item{grade}{grade level number or g for graduates}
+
+\item{year}{academic year ending, so 2015-2016 would be expressed as 2016}
+}
 \description{
 Quick lookup function for the WICHE table
 }

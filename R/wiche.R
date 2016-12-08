@@ -12,6 +12,6 @@
 #'   \item{n}{the number of students enrolled}
 #'   ...
 #' }
-#' @source {http://www.wiche.edu/knocking-8th}
+#' @source {Western Interstate Commission for Higher Education, Knocking at the College Door: Projections of High School Graduates, 2016, www.wiche.edu/knocking.}
 #' @examples
 "wiche"

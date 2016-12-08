@@ -9,7 +9,7 @@ freq(x)
 \arguments{
 \item{x}{the vector of observations}
 }
-\details{
+\description{
 Returns a frequency distribution with more detail than a simple count of objects.
 }
 \keyword{frequncy}
