@@ -2,16 +2,14 @@
 % Please edit documentation in R/round.R
 \name{round}
 \alias{round}
-\title{Override Native Rounding}
+\title{Override R Rounding}
 \usage{
-round(x, digits = 0, apply.format = FALSE)
+round(x, digits = 0)
 }
 \arguments{
 \item{x}{the number to round}
 
 \item{digits}{how many decimal points do you want?}
-
-\item{apply.format}{do you want to enforse a string format, ie 0.00}
 }
 \description{
 Rounds like SAS or Excel with faced with .5

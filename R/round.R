@@ -1,9 +1,8 @@
-#' Override Native Rounding
+#' Override R Rounding
 #'
 #' Rounds like SAS or Excel with faced with .5
 #' @param x the number to round
 #' @param digits how many decimal points do you want?
-#' @param apply.format do you want to enforse a string format, ie 0.00
 #' @keywords round
 #' @export
 #' @examples
@@ -27,7 +26,7 @@
 #'
 #' [1] 2 3 4 5 6 7
 
-round = function(x, digits = 0, apply.format = FALSE) {
+round = function(x, digits = 0) {
 
   ifelse(!is.na(x), {
 
@@ -45,8 +44,6 @@ round = function(x, digits = 0, apply.format = FALSE) {
     x <- as.numeric(x)
     x <- trunc(x);
     x <- x / d
-    if (apply.format)
-      x <- format(x, nsmall = digits)
     if (made.x.negative)
       x <- x * -1
 
