@@ -3,7 +3,5 @@
 export(code_sql_select_only_highest_score)
 export(freq)
 export(is.sample.standardized)
-export(lookup_states)
-export(lookup_wiche)
 export(round)
 export(sdp)

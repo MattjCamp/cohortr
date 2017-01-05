@@ -11,14 +11,14 @@ is.sample.standardized <- function(df){
 
   l <- length(names(df))
 
-  if (l > 13)
-    df <- df %>% select(1:13)
+  if (l > 12)
+    df <- df %>% select(1:12)
 
   sample_names <- names(df)
 
   ref <- c("person", "year", "exam", "score",
            "tg", "us", "location",
-           "school", "district", "sector",
+           "school", "sector",
            "race", "gender", "waiver")
 
   all(sample_names == ref) == TRUE
