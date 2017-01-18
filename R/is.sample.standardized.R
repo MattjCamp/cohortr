@@ -5,7 +5,7 @@
 #' @keywords sample
 #' @param df the data.frame that you want to test
 #' @export
-#' @return Boolean indicating whether the data.frame is sanitized
+#' @return Boolean indicating whether the data.frame is standarized
 
 is.sample.standardized <- function(df){
 
@@ -19,7 +19,7 @@ is.sample.standardized <- function(df){
   ref <- c("person", "year", "exam", "score",
            "tg", "us", "location",
            "school", "sector",
-           "race", "gender", "waiver")
+           "race", "gender", "low")
 
   all(sample_names == ref) == TRUE
 

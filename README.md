@@ -15,7 +15,7 @@ information about educational cohorts.
 data analysts. Most of the ideas come from Hadley's [Tidyverse](https://github.com/tidyverse/tidyverse). Specificially, `dplyr`, the associated pipe operator and the notion of verbs is borrowed from the tidyverse.
 
 In addition, I have created additional packages to support `cohortr` including:
-[`datapointsr`](https://github.com/MattjCamp/datapointsr), [`coderr`](https://github.com/MattjCamp/coderr) and [`dbr`](https://github.com/MattjCamp/dbr).
+[`datapointsr`](https://github.com/MattjCamp/datapointsr) and [`coderr`](https://github.com/MattjCamp/coderr).
 
 `coderr` in particular is used throughout this package because it's designed
 to automate SQL code writing.
@@ -36,37 +36,84 @@ library(devtools)
 # Install remaining supporting packages
 
 install_github('mattjcamp/coderr','mattjcamp')
-install_github('mattjcamp/dbr','mattjcamp')
 install_github('mattjcamp/datapointsr','mattjcamp')
 
 ```
 
-## Quick Start Example
+## Quick Start Example (WICHE)
 
-Here is an example of how you might use the built-in
-example database to get counts and means of the students in 
-the cohorts that you are interested in:
+Here is an example of how you might use `cohortr` to do
+analysis. To follow this example, install the WICHE dataset
+for R using `devtools`:
 
 ```{r}
-"students" %>%
-code_sql_sample("year in (2010, 2011)") %>%
-pull_data() %>% 
-group_by(year) %>% 
-summarize(n = length(person),
-          mean = mean(score))
+
+# Install devtools if it's missing
+
+install.packages("devtools")
+
+library(devtools)
+
+# Install WICHE projects
+
+install_github('mattjcamp/wicher','mattjcamp')
+
 ```
 
-**students** is a table on a SQLite database that comes with the installation of `cohortr`. This is used as a stand in to a database server that would typically house this kind of data. The code above would produce this output:
+This dataset shows school enrollments by state for a period of 30
+years or so. The main dataset that you would look at is called
+`wiche_2013`.
+
+```{r}
+
+library(wicher)
+library(sqldf)
+library(coderr)
+library(tidyverse)
+
+head(wiche_2013)
 
 ```
-# A tibble: 2 × 3
-   year     n  mean
-  <int> <int> <dbl>
-1  2010     4 83.25
-2  2011     5 82.60
+
+      location sector  race gender     grade year    n
+    1       in public asian    all         8 2021 2306
+    2       in public asian    all         9 2021 2407
+    3       in public asian    all        10 2021 2314
+    4       in public asian    all        11 2021 2801
+    5       in public asian    all        12 2021 2578
+    6       in public asian    all graduates 2021 2201
+
+>**NOTE** `sqldf` is a library that you use to apply SQL code
+to R dataframes.
+
+>**NOTE** `tidyverse` is the set of packages used with the tidydata approach (Hadley).
+
+Here is how you would get counts of enrolled students for the US by
+sector for 2010 and 2011:
+
+```{r}
+
+"wiche_2013" %>%
+  code_sql_sample("year in (2010, 2011) and location = 'us' 
+                   and race = 'all' and gender = 'all' and grade = 'graduates'") %>%
+  sqldf() %>% 
+  group_by(sector, year) %>% 
+  summarize(total = n(), total_proj = sum(n)) %>% 
+  arrange(year, sector)
+
 ```
 
-Any verbs that go before `pull_data()` must be SQL statements from
+          sector  year total total_proj
+           <chr> <int> <int>      <int>
+    1        all  2010     1    3386358
+    2 non-public  2010     1     312401
+    3     public  2010     1    3073957
+    4        all  2011     1    3407941
+    5 non-public  2011     1     308284
+    6     public  2011     1    3099657
+
+Any verbs that go before `sqldf()` (or other SQL function for remote databases)
+must be SQL statements from
 `coderr` or `cohortr` while anything that comes after can be normal
 `dplyr` verbs. The idea is that you can save the big data problems for
 the server with SQL and then finish up fixing your data using R
@@ -87,22 +134,3 @@ For instance, we have lots of exams that are spread over lots of tables that can
 be a real headache to use. So, in my private R installation I have written verbs
 that encapsulate the process of gathering up SQL tables, joining, filtering and 
 transformating SQL tables on our server.
-
-I then plug in these verbs as needed to `cohortr` to build up analysis and visualizations.
-
-### Required!
-
-One thing you will have to do is to override the implementation of `pull_data` if you want to use your own data source. This function points to the database that comes with this package and is used in the example. What you could do is copy this function and then replace the object `db` with a reference to your database. The only requirement is that your `db` object must be a database object from the `dbr` package.
-
-For instance, I have an Amazon Redshift `db` object and in my private pull_data function all my credentials are entered in when `pull_data` is called for the first time. You could do the same with MS SQL Server, Amazon Redshift or a local SQLite database.
-
->**NOTE** It's not actually 100% required that you override `pull_data`. You should instead swap out your own query method as long as is able to process SQL statments. So, if you were using data frames you could use something like `sqldf` to execute SQL against your data frame.
-
-## To-Do
-
-Here is some stuff that needs to happen next.
-
-### Need to Code these Verbs
-
-- code_sql_select_most_recent
-- calculate_participation_rates
