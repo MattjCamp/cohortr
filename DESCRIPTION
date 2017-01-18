@@ -2,7 +2,7 @@ Package: cohortr
 Type: Package
 Title: Education Cohort Analysis
 Description: Tidy grammar, resources and shortcuts to help you look at cohorts for education research
-Version: 1.2.1
+Version: 1.2.2
 Author: Matt Campbell
 Maintainer: Who to complain to <mcampbell@collegeboard.org>
 Description: Applies the grammer of data manipulation to educational cohorts so that we can build data analysis that is insightful, transparent and reproducible..
@@ -11,7 +11,6 @@ LazyData: TRUE
 Imports:
     coderr,
     DBI,
-    dbr,
     datapointsr,
     tidyverse
 Suggests:
