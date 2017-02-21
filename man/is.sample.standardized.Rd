@@ -10,7 +10,7 @@ is.sample.standardized(df)
 \item{df}{the data.frame that you want to test}
 }
 \value{
-Boolean indicating whether the data.frame is sanitized
+Boolean indicating whether the data.frame is standarized
 }
 \description{
 If the data.frame passes the test then we know for sure that it will have the expected standard columns that can be used in typical analysis and visualizations. This function looks for these columns in this order: person, year, exam, score, tg, us, location, school, district, sector, race, gender, waiver

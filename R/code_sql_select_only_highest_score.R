@@ -14,11 +14,11 @@ code_sql_select_only_highest_score <- function(sample_sql,
 
   if (by_exam) {
     sample_sql[1] %>%
-    coderr::code_sql_select(select.cols = c("person","year", "exam", "max(score) as score", "tg","us","location","school","sector","race","gender","low"),
-                            group.by.cols = c("person","year", "exam", "tg","us","location","school","sector","race","gender","low"))
+    coderr::code_sql_select(select.cols = c("person","year", "exam", "max(score) as score", "tg","us","location","school","sector","race","gender","low", "under"),
+                            group.by.cols = c("person","year", "exam", "tg","us","location","school","sector","race","gender","low", "under"))
   } else {
     sample_sql[1] %>%
-    coderr::code_sql_select(select.cols = c("person","year", "'all' as exam", "max(score) as score", "tg","us","location","school","sector","race","gender","low"),
-                             group.by.cols = c("person","year", "tg","us","location","school","sector","race","gender","low"))
+    coderr::code_sql_select(select.cols = c("person","year", "'all' as exam", "max(score) as score", "tg","us","location","school","sector","race","gender","low", "under"),
+                             group.by.cols = c("person","year", "tg","us","location","school","sector","race","gender","low", "under"))
   }
 }
