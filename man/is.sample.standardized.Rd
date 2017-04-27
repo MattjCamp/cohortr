@@ -19,4 +19,3 @@ If the data.frame passes the test then we know for sure that it will have the ex
 Looks to make sure that the data.frame columns meet the requirements for standard visualizations.
 }
 \keyword{sample}
-

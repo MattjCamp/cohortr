@@ -18,4 +18,3 @@ Selects distinct examinees with the highest score
 \keyword{database,}
 \keyword{location}
 \keyword{state,}
-

@@ -22,4 +22,3 @@ Returns the standard deviation for a population (using N and not N-1 as denomina
 \keyword{standard}
 \keyword{statistics,}
 \keyword{variability}
-
