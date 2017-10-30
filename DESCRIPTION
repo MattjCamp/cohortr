@@ -2,7 +2,7 @@ Package: cohortr
 Type: Package
 Title: Education Cohort Analysis
 Description: Description: Applies the grammer of data manipulation to educational cohorts so that we can build data analysis that is insightful, transparent and reproducible..
-Version: 1.2.2
+Version: 1.3.0
 Author: Matt Campbell
 Maintainer: Who to complain to <mcampbell@collegeboard.org>
 License: What license is it under?
